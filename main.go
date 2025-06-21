@@ -2,24 +2,17 @@ package main
 
 import "fmt"
 
-func add(a, b int) {
-	fmt.Println(a + b)
-}
-
 func main() {
-	add(1, 2) // invoked the add func here
 
-	a := 10    // expression
-	if a > 0 { // if expression
-		fmt.Println("a is greater than 0")
+	subtraction := func(a, b int) {
+		fmt.Println(a - b)
 	}
+	subtraction(66, 45) // will work
 
-	// Anonymous function
-	func(a, b int) { // IIFE - Immediately Invoked Function Expression
-		fmt.Println(a+b, "IIFE")
-	}(7, 9)
-}
+	add(2, 3) // not work but in global it will work
 
-func init() {
-	fmt.Println("init")
+	// function expression
+	add := func(a, b int) {
+		fmt.Println(a + b)
+	}
 }
