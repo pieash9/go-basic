@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func processOperation(a int, b int, op func(p int, q int)) {
-	op(a, b)
+func call() func(x int, y int) {
+	return add
 }
 
 func add(a int, b int) {
@@ -12,5 +12,6 @@ func add(a int, b int) {
 }
 
 func main() {
-	processOperation(6, 8, add)
+	sum := call() // function expression
+	sum(7, 3)
 }
