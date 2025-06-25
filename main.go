@@ -2,24 +2,16 @@ package main
 
 import "fmt"
 
-func add(a, b int) {
-	fmt.Println(a + b)
+func add(x, y int) {
+	z := x + y
+	fmt.Println(z)
 }
 
 func main() {
-	add(1, 2) // invoked the add func here
-
-	a := 10    // expression
-	if a > 0 { // if expression
-		fmt.Println("a is greater than 0")
-	}
-
-	// Anonymous function
-	func(a, b int) { // IIFE - Immediately Invoked Function Expression
-		fmt.Println(a+b, "IIFE")
-	}(7, 9)
+	add(5, 6)
+	add(51, 61)
 }
 
 func init() {
-	fmt.Println("init")
+	fmt.Println("Hello")
 }
