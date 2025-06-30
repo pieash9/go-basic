@@ -19,7 +19,7 @@ func outer() func() {
 }
 
 func call() {
-	incr1 := outer()
+	incr1 := outer() // show
 	incr1()
 	incr1()
 
@@ -28,10 +28,10 @@ func call() {
 	incr2()
 }
 
-func init() {
-	fmt.Println("====Bank====")
-}
-
 func main() {
 	call()
+}
+
+func init() {
+	fmt.Println("====Bank====")
 }
