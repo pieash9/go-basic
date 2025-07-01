@@ -19,13 +19,14 @@ func outer() func() {
 }
 
 func call() {
-	incr1 := outer() // show
+	incr1 := outer() // show func
 	incr1()
-	incr1()
+	incr1() // second call e closure theke money er value nibe. & a , p er value global theke nibe
 
 	incr2 := outer()
-	incr2()
-	incr2()
+	incr2() // 210
+	incr2() // 320
+	incr2() // 430
 }
 
 func main() {
