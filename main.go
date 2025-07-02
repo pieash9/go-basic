@@ -2,37 +2,26 @@ package main
 
 import "fmt"
 
-const a = 10 // constant
-var p = 100
-
-func outer() func() {
-	money := 100
-	age := 30
-	fmt.Println("Age = ", age)
-
-	show := func() {
-		money = money + a + p
-		fmt.Println(money)
-	}
-
-	return show
-}
-
-func call() {
-	incr1 := outer() // show func
-	incr1()
-	incr1() // second call e closure theke money er value nibe. & a , p er value global theke nibe
-
-	incr2 := outer()
-	incr2() // 210
-	incr2() // 320
-	incr2() // 430
+type User struct { // code segment e thakbe => type User custom type
+	Name string // member variable or property
+	Age  int    // member variable or property
 }
 
 func main() {
-	call()
-}
+	var user1 User
 
-func init() {
-	fmt.Println("====Bank====")
+	user1 = User{ // instance or Object => instance bananor prokriyake bole instantiate
+		Name: "Pieash",
+		Age:  25,
+	}
+
+	user2 := User{ // instance or Object
+		Name: "Sheikh",
+		Age:  28,
+	}
+
+	fmt.Println("Name:", user1.Name)
+	fmt.Println("Age:", user1.Age)
+	fmt.Println("Name:", user2.Name)
+	fmt.Println("Age:", user2.Age)
 }
