@@ -7,6 +7,11 @@ type User struct { // code segment e thakbe => type User custom type
 	Age  int    // member variable or property
 }
 
+func printUserDetails(usr User) {
+	fmt.Println("Name:", usr.Name)
+	fmt.Println("Age:", usr.Age)
+}
+
 func main() {
 	var user1 User
 
@@ -14,14 +19,11 @@ func main() {
 		Name: "Pieash",
 		Age:  25,
 	}
+	printUserDetails(user1)
 
 	user2 := User{ // instance or Object
 		Name: "Sheikh",
 		Age:  28,
 	}
-
-	fmt.Println("Name:", user1.Name)
-	fmt.Println("Age:", user1.Age)
-	fmt.Println("Name:", user2.Name)
-	fmt.Println("Age:", user2.Age)
+	printUserDetails(user2)
 }
