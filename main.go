@@ -1,7 +1,10 @@
 package main
 
-import receiver_func "basic-go/1_receiver_func"
+import (
+	arrays "basic-go/2_arrays"
+)
 
 func main() {
-	receiver_func.Receiver()
+	// receiver_func.Receiver()
+	arrays.Arrays()
 }
