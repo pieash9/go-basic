@@ -1,10 +1,11 @@
 package main
 
 import (
-	arrays "basic-go/2_arrays"
+	pointers "basic-go/3_pointers"
 )
 
 func main() {
 	// receiver_func.Receiver()
-	arrays.Arrays()
+	// arrays.Arrays()
+	pointers.Pointers()
 }
