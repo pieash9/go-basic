@@ -2,7 +2,16 @@ package pointers
 
 import "fmt"
 
-func print(numbers [3]int) {
+// pass by value => direct value pathano ekhtre copy hbe ekti ekti kore
+// pass by reference => starting point er address pass of array
+
+type User struct {
+	Name   string
+	Age    int
+	Salary float64
+}
+
+func print(numbers *[3]int) {
 	fmt.Println(numbers)
 }
 
@@ -17,7 +26,18 @@ func Pointers() {
 	// fmt.Println("value at the address:", *p) // *p is the value at the address | * is value at address
 
 	arr := [3]int{1, 2, 3}
-	print(arr)
+	print(&arr)
+
+	obj := User{ // instance or obj
+		Name:   "Pieash",
+		Age:    26,
+		Salary: 0,
+	}
+
+	p := &obj // address of obj
+	fmt.Println(*p)
+
+	fmt.Println(obj.Age)
 }
 
 /*
@@ -27,6 +47,7 @@ func Pointers() {
 
   *************** compile phase ************
   ** code segment **
+  print = func(numbers int[3]) {...}
 	main = func () {...}
 
 */

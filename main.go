@@ -1,11 +1,12 @@
 package main
 
 import (
-	pointers "basic-go/3_pointers"
+	slice "basic-go/4_slice"
 )
 
 func main() {
 	// receiver_func.Receiver()
 	// arrays.Arrays()
-	pointers.Pointers()
+	// pointers.Pointers()
+	slice.Slice()
 }
