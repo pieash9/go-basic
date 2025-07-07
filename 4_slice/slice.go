@@ -7,7 +7,12 @@ func Slice() {
 	fmt.Println(arr)
 
 	s := arr[1:4]
-	fmt.Println(s)
+	fmt.Println(s) // ["is" "a" "go"]
+
+	s1 := s[1:2]
+	fmt.Println(s1) // ["a"], len = 1, cap = 4
+	fmt.Println(len(s1))
+	fmt.Println(cap(s1))
 }
 
 /*
@@ -23,7 +28,7 @@ func Slice() {
 	{
 **	slice => Ptr=1, len=3, cap=5
 ** Array => arr := [6]string{"this", "this", "is", "a", "go", "interview", "Ques"}
-	so here arr[1:4] => Ptr=1, len=3, cap=5
+	so here arr[1:4] => ptr=1, len=3(je koita value ache), cap=5(jekhane thke shuru hoise ekbre shesh prjnto)
 
 	}
 
