@@ -2,20 +2,24 @@ package slice
 
 import "fmt"
 
+func changSlice(p []int) []int {
+	p[0] = 10         // [10, 6, 7] ekhne purber 0 index er value 5 ke change kore 10 krbe
+	p = append(p, 11) // [10, 6, 7, 11] len= 4, cap = 6
+	return p
+}
+
 func Slice() {
-	var x []int      // [], ptr = nil, len = 0, cap = 0
-	x = append(x, 1) // [1], ptr = 26 ,len = 1, cap = 1 (heap e rakhbe value)
-	x = append(x, 2) // [1, 2], ptr = 27 ,len = 2, cap = 2 (heap e rakhbe value)  // capacity & length same hole 2 dara gun krbe
-	x = append(x, 3) // [1, 2, 3], ptr = 29 ,len = 3, cap = 3 (heap e rakhbe value)  // capacity & length same hole 2 dara gun krbe
-	y := x
+	x := []int{1, 2, 3, 4, 5}
+	x = append(x, 6) // ptr = 25, len = 6, cap = 10
+	x = append(x, 7) // ptr = 25, len = 7, cap = 10
 
-	x = append(x, 4)
-	y = append(y, 5)
+	a := x[4:] // 4 index theke sob gula value niye toiri krbe [5, 6, 7] ptr = 29, len = 3, cap = 6 (slice kora value gulo cap theke bad jabe)
 
-	x[0] = 10
+	y := changSlice(a) // [10, 6, 7, 11] ptr = 29, len = 4, cap = 6
 
-	fmt.Println(x) // [10 2 3 5]
-	fmt.Println(y) // [10 2 3 5]
+	fmt.Println(x)      // [1 2 3 4 10 6 7]
+	fmt.Println(y)      // [10 6 7 11]
+	fmt.Println(x[0:8]) // [1 2 3 4 10 6 7 11]
 }
 
 /*
