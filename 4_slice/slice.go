@@ -2,6 +2,12 @@ package slice
 
 import "fmt"
 
+func print(numbers ...int) { // slice hisebe receiver (variadic parameter)
+	fmt.Println(numbers)      // [1 2 3 4 5 6 7 8 9 10]
+	fmt.Println(len(numbers)) // 10
+	fmt.Println(cap(numbers)) // 10
+}
+
 func changSlice(p []int) []int {
 	p[0] = 10         // [10, 6, 7] ekhne purber 0 index er value 5 ke change kore 10 krbe
 	p = append(p, 11) // [10, 6, 7, 11] len= 4, cap = 6
@@ -20,6 +26,9 @@ func Slice() {
 	fmt.Println(x)      // [1 2 3 4 10 6 7]
 	fmt.Println(y)      // [10 6 7 11]
 	fmt.Println(x[0:8]) // [1 2 3 4 10 6 7 11]
+
+	print(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
 }
 
 /*
