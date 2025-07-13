@@ -1,12 +1,13 @@
 package main
 
 import (
-	slice "basic-go/4_slice"
+	spvsbp "basic-go/5_sp_vs_bp"
 )
 
 func main() {
 	// receiver_func.Receiver()
 	// arrays.Arrays()
 	// pointers.Pointers()
-	slice.Slice()
+	// slice.Slice()
+	spvsbp.SP_vs_BP()
 }
