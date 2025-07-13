@@ -1,7 +1,7 @@
 package main
 
 import (
-	spvsbp "basic-go/5_sp_vs_bp"
+	vogusdatatypes "basic-go/vogus_data_types"
 )
 
 func main() {
@@ -9,5 +9,6 @@ func main() {
 	// arrays.Arrays()
 	// pointers.Pointers()
 	// slice.Slice()
-	spvsbp.SP_vs_BP()
+	// spvsbp.SP_vs_BP()
+	vogusdatatypes.Vogusdatatypes()
 }
