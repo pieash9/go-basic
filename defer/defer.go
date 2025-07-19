@@ -14,16 +14,6 @@ func calculate() (result int) {
 	result = 5
 	fmt.Println("Second", result)
 
-	p := func(a int) {
-		fmt.Println("ami", a)
-	}
-
-	defer p(result)
-
-	fmt.Println("third", result)
-
-	defer fmt.Println(5)
-
 	return
 }
 
