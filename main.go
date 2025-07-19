@@ -1,7 +1,7 @@
 package main
 
 import (
-	vogusdatatypes "basic-go/vogus_data_types"
+	deferExplain "basic-go/defer"
 )
 
 func main() {
@@ -10,5 +10,6 @@ func main() {
 	// pointers.Pointers()
 	// slice.Slice()
 	// spvsbp.SP_vs_BP()
-	vogusdatatypes.Vogusdatatypes()
+	// vogusdatatypes.Vogusdatatypes()
+	deferExplain.Defer()
 }
