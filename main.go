@@ -11,5 +11,5 @@ func main() {
 	// slice.Slice()
 	// spvsbp.SP_vs_BP()
 	// vogusdatatypes.Vogusdatatypes()
-	deferExplain.Defer()
+	deferExplain.DeferExplain()
 }
