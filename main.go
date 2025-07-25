@@ -1,7 +1,7 @@
 package main
 
 import (
-	deferExplain "basic-go/defer"
+	goroutine "basic-go/go_routine"
 )
 
 func main() {
@@ -11,5 +11,5 @@ func main() {
 	// slice.Slice()
 	// spvsbp.SP_vs_BP()
 	// vogusdatatypes.Vogusdatatypes()
-	deferExplain.DeferExplain()
+	goroutine.GO_Routine()
 }
